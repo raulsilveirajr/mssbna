@@ -4,9 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Eclipse ###
-.metadata
-
 ### STS ###
 .apt_generated
 .classpath
@@ -34,6 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Mac ###
-.DS_Store
