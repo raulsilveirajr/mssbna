@@ -78,7 +78,4 @@ public class Worker implements Serializable{
 			return false;
 		return true;
 	}	
-	
-	
-	
 }
