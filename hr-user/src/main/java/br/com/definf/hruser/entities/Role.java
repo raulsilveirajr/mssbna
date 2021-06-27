@@ -8,23 +8,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+@Entity
+@Table(name="tb_role")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@EqualsAndHashCode
-@Entity
-@Table(name="tb_role")
 public class Role implements Serializable{
 	private static final long serialVersionUID = 1L;
 
  	@Id
  	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ 	@JsonProperty("id")
 	private Long id;
 
+ 	@JsonProperty("name")
  	private String roleName;
 }
