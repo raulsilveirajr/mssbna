@@ -17,11 +17,6 @@ public class UserResource {
 	
 	@Autowired
 	private UserService userService;
-	
-	@GetMapping(value = "/test")
-	public ResponseEntity<User> test() {
-		return ResponseEntity.ok(new User());
-	}
 
 	@GetMapping(value = "/search")
 	public ResponseEntity<User> findByEmail(@RequestParam String email) {
@@ -29,7 +24,6 @@ public class UserResource {
 			User user = userService.findByEmail(email);
 			return ResponseEntity.ok(user);
 		} catch (Exception e) {
-			System.out.println("BAD");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 	}
