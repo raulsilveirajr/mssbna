@@ -27,6 +27,6 @@ public class Role implements Serializable{
  	@JsonProperty("id")
 	private Long id;
 
- 	@JsonProperty("name")
+ 	@JsonProperty("roleName")
  	private String roleName;
 }
